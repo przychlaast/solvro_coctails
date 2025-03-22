@@ -166,13 +166,13 @@ def plot_cluster_characteristics(df, labels, method_name):
 
 if __name__ == "__main__":
     try:
-        df = load_processed_data('../data/processed/processed_cocktails.json')
+        df = load_processed_data('../data/processed_cocktails.json')
     except FileNotFoundError:
         try:
             df = load_and_preprocess_data('../data/cocktail_dataset.json')
             df, _, _ = encode_categorical_features(df)
             
-            df.to_json('../data/processed/processed_cocktails.json', orient='records')
+            df.to_json('../data/processed_cocktails.json', orient='records')
         except Exception as e:
             print(f"Błąd podczas przetwarzania danych: {e}")
             exit(1)

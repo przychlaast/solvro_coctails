@@ -1,0 +1,40 @@
+ [build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cocktails-clustering"
+version = "0.1.0"
+description = "Clusterization analysis of cocktails"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "Stasiu", email = "275946@student.pwd.edu.pl"}
+]
+
+dependencies = [
+    "pandas>=1.5.3",
+    "numpy>=1.24.3",
+    "matplotlib>=3.7.1",
+    "scikit-learn>=1.2.2",
+    "seaborn>=0.12.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0"
+]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38", "py39", "py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
