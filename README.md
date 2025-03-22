@@ -8,7 +8,6 @@ Aby uruchomić projekt, potrzebujesz Pythona w wersji 3.8 lub nowszej oraz zains
 
 ## Instalacja
 
-### Zainstaluj zależności z pliku `dependencies.txt`
 Aby zainstalować wszystkie wymagane biblioteki, użyj poniższej komendy:
 ```bash
 pip install -r dependencies.txt
