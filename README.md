@@ -1,4 +1,4 @@
-# Klasteryzacji Koktajli
+# Klasteryzacja Koktajli
 
 ## Opis
 Projekt ma na celu analizę klasteryzacji koktajli na podstawie danych o składnikach, kategoriach i typach szklanek.
