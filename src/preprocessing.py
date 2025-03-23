@@ -16,7 +16,7 @@ def encode_categorical(df):
     return pd.concat([df_encoded, df_tags], axis=1), mlb.classes_
 
 
-def augment_data(df, len_new_samples=1000):
+def augment_data(df, num_new_samples=1000):
     """Augmentacja danych poprzez tworzenie nowych koktajli"""
     original_size = len(df)
     new_samples = []
@@ -31,7 +31,7 @@ def augment_data(df, len_new_samples=1000):
             if ing not in category_ingredients[category]:
                 category_ingredients[category].append(ing)
     
-    for i in range(len_new_samples):
+    for i in range(num_new_samples):
         sample1, sample2 = df.sample(2).iloc
         
         new_cocktail = {}
@@ -144,7 +144,7 @@ if __name__ == "__main__":
     df = load_and_preprocess_data('../data/cocktail_dataset.json')
     print(f"Zbiór danych po preprocessingu: {df.shape}")
 
-    augmented_df = augment_data(df, len_new_samples=500)
+    augmented_df = augment_data(df, num_new_samples=500)
     encoded_df, _, _ = encode_categorical_features(augmented_df)
 
     print(f"Zbiór danych po kodowaniu cech: {encoded_df.shape}")
