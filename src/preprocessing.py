@@ -36,7 +36,7 @@ def augment_data(df, len_new_samples=1000):
         
         new_cocktail = {}
         new_cocktail['name'] = f"Mix {sample1['name']} i {sample2['name']}"
-        new_cocktail['category'] = sample1['category']  # Zachowanie kategorii pierwszego koktajlu
+        new_cocktail['category'] = sample1['category']
         new_cocktail['glass'] = random.choice([sample1['glass'], sample2['glass']])
         
         new_ingredients = []
