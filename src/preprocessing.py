@@ -119,7 +119,7 @@ def create_features(df):
     """Tworzy nowe cechy na podstawie istniejących danych"""
     df['num_ingredients'] = df['ingredients'].apply(len)
     df['num_alcoholic_ingredients'] = df['ingredients'].apply(lambda x: sum(ing.get('alcohol', 0) for ing in x))
-    df['percent_alcoholic'] = (df['num_alcoholic_ingredients'] / df['num_ingredients'] * 100).fillna(0)
+    df['percent_alcoholic'] = (df['num_alcoholic_ingredients'] / df['num_ingredients'] * 100)
     df['num_tags'] = df['tags'].apply(len)
     
     return df
